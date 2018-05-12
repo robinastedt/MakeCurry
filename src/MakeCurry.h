@@ -1,6 +1,6 @@
 /*
 Author: Robin Åstedt <robin.astedt@gmail.com>
-GitHub: https://github.com/robinastedt/
+GitHub: https://github.com/robinastedt/MakeCurry
 */
 
 #ifndef _MAKE_CURRY_H_
