@@ -1,4 +1,7 @@
+CC=g++
+FLAGS=-Wall -O3 -std=c++14
+OUT=curry
+SRC=src/TestCurry.cpp
 
-
-compile: src/TestCurry.cpp
-	g++ -Wall -O3 -std=c++14 -o curry src/TestCurry.cpp
+compile: $(SRC)
+	$(CC) $(FLAGS) -o $(OUT) $(SRC)
