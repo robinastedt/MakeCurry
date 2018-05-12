@@ -19,8 +19,10 @@ namespace make_curry_util {
     struct curry_container<std::function<RETURN(FIRST)>>
     {
         // Single argument functions are already curried
-        using curried_t = std::function<RETURN(FIRST)>;
-
+        typedef
+        std::function<RETURN(FIRST)>
+        curried_t;
+        
         // Stores the curried function upon initialization
         const curried_t curried_func;
         curry_container(curried_t func) : curried_func(func) {}
@@ -31,7 +33,9 @@ namespace make_curry_util {
     struct curry_container<std::function<RETURN(FIRST,REST...)>>
     {
         // Recursive type definition of nested functions
-        using curried_t = std::function<struct curry_container<std::function<RETURN(REST...)>>::curried_t(FIRST)>;
+        typedef
+        std::function<struct curry_container<std::function<RETURN(REST...)>>::curried_t(FIRST)>
+        curried_t;
 
         // Constructs curried function and stores it
         const curried_t curried_func;
