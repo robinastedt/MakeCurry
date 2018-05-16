@@ -6,7 +6,6 @@ GitHub: https://github.com/robinastedt/MakeCurry
 #ifndef _MAKE_CURRY_H_
 #define _MAKE_CURRY_H_
 
-#include <memory>
 #include <functional>
 
 namespace make_curry_util {
