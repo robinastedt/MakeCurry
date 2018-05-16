@@ -22,7 +22,7 @@ namespace make_curry_util {
         typedef
         std::function<RETURN(FIRST)>
         curried_t;
-        
+
         // Stores the curried function upon initialization
         const curried_t curried_func;
         curry_container(curried_t func) : curried_func(func) {}
@@ -59,7 +59,7 @@ namespace make_curry_util {
 }
 
 
-// Implementation for lambda expressions
+// Implementation for function objects
 template<typename RETURN, typename... ARGS>
 auto make_curry(const std::function<RETURN(ARGS...)> func)
 {
